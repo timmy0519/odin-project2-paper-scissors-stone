@@ -1,20 +1,10 @@
-<script>
-    const choices = ['ROCK','PAPER','SCISSORS'];
-    function playRound(playerSelection,computerSelection){
-        player_i = choices.indexOf(playerSelection.toUpperCase());
-        computer_i = choices.indexOf(computerSelection.toUpperCase());
-        if(player_i==computer_i){
-            return "Tie. Another Round!"
-        }else if((player_i+1)%3==computer_i){
-            return `You lose! ${choices[player_i]} loses ${choices[computer_i]}`
-        }else{
-            return `You Win! ${choices[player_i]} beats ${choices[computer_i]}`;;
-        }
-    }
-    for(let i=0;i<5;i++){
-        let computerPlay = () => choices[Math.floor(Math.random() * 2)];
-        let playerPlay = () => prompt()
-        console.log(playRound(playerPlay(),computerPlay()));
-    }
-    
-</script>
+<div id="scoreBoard"></div>
+<div id="play">
+    <button id="paper">Paper</button>
+    <button id="scissor">Scissor</button>
+    <button id="stone">Stone</button>
+</div>
+<div id="submit">
+    <button id="submit_button">submit</button>
+</div>
+<script src="game.js"> </script>
